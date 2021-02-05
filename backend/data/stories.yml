@@ -1,0 +1,306 @@
+version: "2.0"
+stories:
+- story: complete happy path
+  steps:
+  - intent: cumprimentar
+  - action: utter_intro
+  - intent: afirmacao
+  - action: curriculo_form
+  - active_loop: curriculo_form
+  - slot_was_set:
+    - requested_slot: nome
+  - slot_was_set:
+    - nome: Marcos
+  - slot_was_set:
+    - primeiroNome: Marcos
+  - slot_was_set:
+    - requested_slot: idade
+  - slot_was_set:
+    - idade: '23'
+  - slot_was_set:
+    - requested_slot: cep
+  - slot_was_set:
+    - cep: '70070300'
+  - slot_was_set:
+    - endereco: Esplanada da Torre
+  - slot_was_set:
+    - cidade: Brasília
+  - slot_was_set:
+    - estado: DF
+  - slot_was_set:
+    - requested_slot: telefone
+  - slot_was_set:
+    - telefone: '99999999999'
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: marc@gmail.com
+  - slot_was_set:
+    - requested_slot: confirmacao_dados_basicos
+  - slot_was_set:
+    - confirmacao_dados_basicos: Sim
+  - slot_was_set:
+    - confirmacao_dados_basicos: Sim
+  - slot_was_set:
+    - requested_slot: user_has_linkedln
+  - slot_was_set:
+    - user_has_linkedln: Sim
+  - slot_was_set:
+    - user_has_linkedln: Sim
+  - slot_was_set:
+    - requested_slot: linkedln_link
+  - slot_was_set:
+    - linkedln_link: link.com.br
+  - slot_was_set:
+    - requested_slot: confirmacao_linkedln
+  - slot_was_set:
+    - confirmacao_linkedln: Sim
+  - slot_was_set:
+    - confirmacao_linkedln: Sim
+  - slot_was_set:
+    - requested_slot: area
+  - slot_was_set:
+    - area: Tecnologia
+  - slot_was_set:
+    - area: Tecnologia
+  - slot_was_set:
+    - requested_slot: area_nivel
+  - slot_was_set:
+    - area_nivel: Júnior
+  - slot_was_set:
+    - area_nivel: Júnior
+  - slot_was_set:
+    - requested_slot: escolaridade
+  - slot_was_set:
+    - escolaridade: Técnico
+  - slot_was_set:
+    - escolaridade: Técnico
+  - slot_was_set:
+    - requested_slot: escolaridadeFormadoOuAndamento
+  - slot_was_set:
+    - escolaridadeFormadoOuAndamento: Completo
+  - slot_was_set:
+    - escolaridadeFormadoOuAndamento: Completo
+  - slot_was_set:
+    - previsaoTermino: Completo
+  - slot_was_set:
+    - requested_slot: cursoNome
+  - slot_was_set:
+    - cursoNome: tecnologia
+  - slot_was_set:
+    - requested_slot: institutoNome
+  - slot_was_set:
+    - institutoNome: ifb
+  - slot_was_set:
+    - requested_slot: objetivo
+  - slot_was_set:
+    - objetivo: Primeiro emprego
+  - slot_was_set:
+    - requested_slot: confirmacao_formacao
+  - slot_was_set:
+    - confirmacao_formacao: Sim
+  - slot_was_set:
+    - confirmacao_formacao: Sim
+  - slot_was_set:
+    - requested_slot: conhecer_curso
+  - slot_was_set:
+    - conhecer_curso: Sim
+  - slot_was_set:
+    - conhecer_curso: Sim
+  - slot_was_set:
+    - requested_slot: habilidade
+  - slot_was_set:
+    - habilidade: Python
+  - slot_was_set:
+    - requested_slot: confirmacao_habilidade
+  - slot_was_set:
+    - confirmacao_habilidade: Sim
+  - slot_was_set:
+    - confirmacao_habilidade: Sim
+  - slot_was_set:
+    - requested_slot: conhecer_idioma
+  - slot_was_set:
+    - conhecer_idioma: Sim
+  - slot_was_set:
+    - conhecer_idioma: Sim
+  - slot_was_set:
+    - requested_slot: idioma
+  - slot_was_set:
+    - idioma: ingles
+  - slot_was_set:
+    - requested_slot: idioma_nivel
+  - slot_was_set:
+    - idioma_nivel: Avançado
+  - slot_was_set:
+    - idioma_nivel: Avançado
+  - slot_was_set:
+    - requested_slot: confirmacao_idioma
+  - slot_was_set:
+    - confirmacao_idioma: Sim
+  - slot_was_set:
+    - confirmacao_idioma: Sim
+  - slot_was_set:
+    - requested_slot: conhecer_projeto
+  - slot_was_set:
+    - conhecer_projeto: Sim
+  - slot_was_set:
+    - conhecer_projeto: Sim
+  - slot_was_set:
+    - requested_slot: pesquisaCientifica
+  - slot_was_set:
+    - pesquisaCientifica: artigo cientifico na area de ia
+  - slot_was_set:
+    - requested_slot: confirmacao_pesquisa
+  - slot_was_set:
+    - confirmacao_pesquisa: Sim
+  - slot_was_set:
+    - confirmacao_pesquisa: Sim
+  - slot_was_set:
+    - requested_slot: conhecer_experiencia
+  - slot_was_set:
+    - conhecer_experiencia: Sim
+  - slot_was_set:
+    - conhecer_experiencia: Sim
+  - slot_was_set:
+    - cargo: Desenvolvedor
+  - slot_was_set:
+    - nomeEmpresa: Rasa
+  - slot_was_set:
+    - cargo_data_entrada_saida: 2019-2020
+  - slot_was_set:
+    - cargo_descricao: Desenvolvimento de chatbos
+  - slot_was_set:
+    - confirmacao_experiencia: Sim
+  - slot_was_set:
+    - requested_slot: conhecer_voluntario
+  - slot_was_set:
+    - conhecer_voluntario: Sim
+  - slot_was_set:
+    - conhecer_voluntario: Sim
+  - slot_was_set:
+    - nome_empresa_voluntario: Rasa
+  - slot_was_set:
+    - cargo_voluntario: Dev
+  - slot_was_set:
+    - cargo_descricao_voluntario: Desenvolvimento de sites voltado pra IA
+  - slot_was_set:
+    - cargo_data_entrada_saida_voluntario: 2019-2020
+  - slot_was_set:
+    - confirmacao_experiencia_voluntario: Sim
+  - slot_was_set:
+    - requested_slot: feedback
+  - slot_was_set:
+    - feedback: top
+  - slot_was_set:
+    - requested_slot: nota
+  - slot_was_set:
+    - nota: '10'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_gerando_curriculo
+  - action: action_submit_resume
+  - slot_was_set:
+    - nome: null
+  - slot_was_set:
+    - primeiroNome: null
+  - slot_was_set:
+    - idade: null
+  - slot_was_set:
+    - cep: null
+  - slot_was_set:
+    - endereco: null
+  - slot_was_set:
+    - cidade: null
+  - slot_was_set:
+    - estado: null
+  - slot_was_set:
+    - telefone: null
+  - slot_was_set:
+    - email: null
+  - slot_was_set:
+    - linkedln_link: null
+  - slot_was_set:
+    - user_has_linkedln: null
+  - slot_was_set:
+    - area: null
+  - slot_was_set:
+    - area_nivel: null
+  - slot_was_set:
+    - objetivo: null
+  - slot_was_set:
+    - escolaridade: null
+  - slot_was_set:
+    - escolaridadeFormadoOuAndamento: null
+  - slot_was_set:
+    - cursoNome: null
+  - slot_was_set:
+    - institutoNome: null
+  - slot_was_set:
+    - previsaoTermino: null
+  - slot_was_set:
+    - conhecer_curso: null
+  - slot_was_set:
+    - habilidade: null
+  - slot_was_set:
+    - conhecer_idioma: null
+  - slot_was_set:
+    - idioma: null
+  - slot_was_set:
+    - idioma_nivel: null
+  - slot_was_set:
+    - conhecer_projeto: null
+  - slot_was_set:
+    - pesquisaCientifica: null
+  - slot_was_set:
+    - conhecer_experiencia: null
+  - slot_was_set:
+    - nomeEmpresa: null
+  - slot_was_set:
+    - cargo: null
+  - slot_was_set:
+    - cargo_descricao: null
+  - slot_was_set:
+    - cargo_data_entrada_saida: null
+  - slot_was_set:
+    - conhecer_voluntario: null
+  - slot_was_set:
+    - nome_empresa_voluntario: null
+  - slot_was_set:
+    - cargo_voluntario: null
+  - slot_was_set:
+    - cargo_descricao_voluntario: null
+  - slot_was_set:
+    - cargo_data_entrada_saida_voluntario: null
+  - slot_was_set:
+    - feedback: null
+  - slot_was_set:
+    - nota: null
+  - slot_was_set:
+    - confirmacao_dados_basicos: null
+  - slot_was_set:
+    - confirmacao_formacao: null
+  - slot_was_set:
+    - confirmacao_habilidade: null
+  - slot_was_set:
+    - confirmacao_pesquisa: null
+  - slot_was_set:
+    - confirmacao_experiencia: null
+  - slot_was_set:
+    - confirmacao_linkedln: null
+  - slot_was_set:
+    - confirmacao_experiencia_voluntario: null
+  - slot_was_set:
+    - confirmacao_idioma: null
+  - action: utter_curriculo_pronto
+  - action: utter_curriculo_link
+
+- story: unhappy complete path
+  steps:
+  - intent: cumprimentar
+  - action: utter_intro
+  - intent: negacao
+  - action: utter_vamos_continuar
+  - intent: negacao
+  - action: utter_unhappy
+  - action: action_restart

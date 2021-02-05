@@ -1,0 +1,303 @@
+version: "2.0"
+nlu:
+- intent: cumprimentar
+  examples: |
+    - oi, tudo bem
+    - oi, como vai voce
+    - como vao as coisas
+    - opa tudo bem
+    - boa tarde
+    - boa noite
+    - bom dia
+    - oi, bom dia
+    - oi, boa tarde
+    - oi, boa noite
+    - eai
+    - oie
+    - ei
+    - fala
+    - tranquilo
+    - tudo bom?
+    - como voce esta
+    - como voce ta
+    - como vai você
+    - como vai voce
+    - como vai vc
+    - como vai
+    - como ta
+    - joia
+    - joinha
+    - oi
+    - olá
+    - e aí
+    - E aí?
+    - De boa?
+    - Oi
+    - Opa
+    - Olá
+    - Ola
+    - boa
+    - aeee
+    - ola
+    - E ai mano
+    - opa
+    - fala meu querido
+    - oi moço
+    - olá rapaz
+    - bom dia meu senhor
+    - boa notie
+    - e ai
+    - Olá tudo bem?
+    - Está tudo bem?
+    - e aí?
+    - E ai bot
+    - Oi!
+    - eai?
+    - Boa tarde
+    - Olá!
+    - top
+- intent: afirmacao
+  examples: |
+    - (sim){"entity":"confirmacao", "value": "sim"}
+    - (s){"entity":"confirmacao", "value": "sim"}
+    - (ss){"entity":"confirmacao", "value": "sim"}
+    - (tá){"entity":"confirmacao", "value": "sim"}
+    - (correto){"entity":"confirmacao", "value": "sim"}
+    - (exatamente){"entity":"confirmacao", "value": "sim"}
+    - (exato){"entity":"confirmacao", "value": "sim"}
+    - talvez
+    - entendi
+    - entendi sim
+    - sim, entendi
+    - beleza
+    - quero
+    - tudo bem
+    - vamos
+    - vamo
+    - bora
+    - pode ser
+    - compreendi
+    - compreendo
+    - blz
+    - claro
+    - aham
+    - uhum
+    - realmente
+    - podemos
+    - pode
+    - Sim.
+    - Entendi.
+    - avmos
+    - yes
+    - si
+    - vai lá
+    - prossiga
+    - podemos prosseguir
+    - ok
+    - certo
+    - vamo la
+    - vamos la
+    - podemos sim
+    - Tudo certo
+    - Claro
+    - Ok
+    - ta
+    - Beleza
+    - OK
+    - Sim
+    - all right
+    - vamos lá
+    - vinha sim
+    - oba
+    - borá
+    - sim, podemos começar!
+    - olá tudo bem e com voce? sim, podemos começar
+    - tudo bem e contigo!? Vamos começar!
+    - bora bora
+    - vamo lá
+    - vamu
+    - simbora
+    - bora amigo
+    - vamos sim
+    - bora sim
+    - só bora!
+    - /afirmacao
+    - sim
+    - dev
+    - tecnologia
+- intent: negacao
+  examples: |
+    - (não){"entity":"confirmacao", "value": "nao"}
+    - (n){"entity":"confirmacao", "value": "nao"}
+    - (nn){"entity":"confirmacao", "value": "nao"}
+    - (negativo){"entity":"confirmacao", "value": "nao"}
+    - (nao){"entity":"confirmacao", "value": "nao"}
+    - (no){"entity":"confirmacao", "value": "nao"}
+    - (nope){"entity":"confirmacao", "value": "nao"}
+    - (errado){"entity":"confirmacao", "value": "nao"}
+    - nunca
+    - nada
+    - só isso
+    - foi só isso
+    - discordo
+    - mais ou menos
+    - nao conheco
+    - não quero
+    - escolhi errado
+    - falei errado
+    - duvida
+    - ainda não sei
+    - nenhum
+    - jamais
+    - Não
+- intent: dados_pessoais
+  examples: |
+    - meu nome é (Marcos Allysson){"entity":"nome"}
+    - me chamo (Marcos Allysson){"entity":"nome"}
+    - (marcos allysson){"entity":"nome"}
+    - (natanael henrique carvalho jales){"entity": "nome"}
+    - (Emanuelle Ferreira da Silva){"entity": "nome"}
+    - tenho (30){"entity":"idade"} anos
+    - (20){"entity":"idade"} anos
+    - meu cep é (70030300){"entity":"cep"}
+    - CEP (70030300){"entity":"cep"}
+    - (70070300){"entity":"cep"}
+    - meu número é (99999999999){"entity":"telefone"}
+    - telefone: (99999999999){"entity":"telefone"}
+    - (99999999999){"entity":"telefone"}
+    - meu email é (email@gmail.com){"entity":"email"}
+    - (email@gmail.com){"entity":"email"}
+    - email: (email@gmail.com){"entity":"email"}
+    - meu linkedin é (https://www.linkedin.com/in/marcos-allysson/){"entity":"linkedln_link"}
+    - linkedin: (https://www.linkedin.com/in/marcos-allysson-648128188/){"entity":"linkedln_link"}
+    - (https://link.com.br){"entity":"linkedln_link"}
+    - (top){"entity":"feedback"}
+    - (top demais){"entity":"feedback"}
+    - (muito bom){"entity":"feedback"}
+    - (gostei){"entity":"feedback"}
+    - (rápido e prático){"entity":"feedback"}
+    - (nota 10){"entity":"nota"}
+    - (nota 10){"entity":"nota"} muito bom
+    - (marcos){"entity":"nome"}
+    - (23){"entity":"idade"}
+    - (71588186){"entity":"cep"}
+    - (marcos@gmail.com){"entity":"email"}
+    - (linkedin.com.br){"entity":"linkedln_link"}
+    - (link.com.br){"entity":"linkedln_link"}
+    - (10){"entity":"nota"}
+    - marcos
+    - asda2@gmail.com
+    - link.com.br
+    - marc@gmail.com
+- intent: dados_formacao
+  examples: |
+    - sou da area de (tecnologia){"entity":"area"}
+    - meu nível na área é (pleno){"entity":"area_nivel"}
+    - (Primeiro emprego objetivando adquirir conhecimento e experiência necessária junto à empresa.){"entity":"objetivo"}
+    - (ensino superior){"entity":"escolaridade"}
+    - estou cursando (direito){"entity":"cursoNome"}
+    - (tecnologia){"entity":"cursoNome"}
+    - (advogacia){"entity":"cursoNome"}
+    - eu estudo no (Instituto Federal de Brasília){"entity":"institutoNome"}
+    - (ufmg){"entity":"institutoNome"}
+    - (instituto federal de brasilia){"entity":"institutoNome"}
+    - previsão pra me formar em (2021){"entity":"previsaoTermino"}
+    - (2020){"entity":"previsaoTermino"}
+    - fiz curso de (auxiliar administrativo){"entity":"habilidade"}
+    - já participei no desenvolvimento de (artigos cientificos){"entity":"pesquisaCientifica"}
+    - participei no (desenvolvimento de artigos){"entity":"pesquisaCientifica"} cientificos juntamente ao lattes
+    - (tecnologo){"entity":"escolaridade"} (sistemas para internet){"entity":"cursoNome"}
+    - (unb){"entity":"institutoNome"}
+    - (objetivo trabalhar, aprender e agregar valor a empresa){"entity":"objetivo"}
+    - (universidade de brasilia){"entity":"institutoNome"}
+    - eu falo (inglês){"entity": "idioma"} nível (básico){"entity":"idioma_nivel"}
+    - falo (francês){"entity": "idioma"} nível (intermediário){"entity":"idioma_nivel"}
+    - (espanhol){"entity": "idioma"} nível (avançado){"entity":"idioma_nivel"}
+    - já sou (fluente){"entity":"idioma_nivel"} em (inglês){"entity": "idioma"}
+    - (francês){"entity": "idioma"} (básico){"entity":"idioma_nivel"}
+    - ifb
+    - primeiro emprego
+    - python - digital
+    - ingles
+    - primeiro emprego pra ganhar experiencia
+    - artigo cientifico
+    - instituto federal de minas gerais
+    - aprimorar meus conhecimento, gerando valor a empresa e melhorando a vida dos vossos clientes
+    - rasa open source - machine learning
+    - frances
+    - artigos cientificos na area de tecnologia com objetivando de estudar e aprimorar conhecimentos em IA
+    - sistemas para internet
+    - universidade de brasilia
+    - python developer - rasa youtube
+    - artigo cientifico na area de inteligenc artificial
+    - artigo cientifico na area de ia
+- intent: dados_experiencia
+  examples: |
+    - trabalhei no (Google){"entity":"nomeEmpresa"}
+    - (rasa){"entity":"nomeEmpresa"}
+    - desempenhei a função de (gerente){"entity":"cargo"} quando trabalhei no google
+    - (executivo){"entity":"cargo"}
+    - (minha função era organizar todos os processos da empresa). {"entity":"cargo_descricao"}
+    - fique lá no período de (2010-2020){"entity": "cargo_data_entrada_saida"}
+    - era responsavel por organizar os processos da empresa
+    - (2010-2020){"entity": "cargo_data_entrada_saida"}
+    - responsavel pelo trafego interno e externo da empresa
+    - desenvolvimento de websites
+    - desenvolvimento de websites e apps
+    - Rasa
+    - python developer
+    - desenvolvimento de aplicacoes usando linguagem de programa python
+    - 2010-2021
+    - python
+    - rasa
+    - desenvolvedor
+    - desenvolvimento de apps
+    - 2019-2021
+    - python - rasa
+    - 23
+    - 70070300
+    - 99999999999
+    - desenvolvimento
+    - 2019-2020
+    - 10
+- intent: obrigado
+  examples: |
+    - obrigada
+    - agradeço
+    - valeu, obrigado!
+    - opa, valeu!
+    - valeu
+    - massa
+    - de boa
+    - de boa, obrigado
+    - agradeço demais!
+    - obrigado
+- intent: area
+  examples: |
+    - (Vendas){"entity": "area"}
+    - (Marketing){"entity": "area"}
+    - (Tecnologia){"entity": "area"}
+    - (Direito){"entity": "area"}
+    - (Saúde){"entity": "area"}
+    - (RH){"entity": "area"}
+    - (Administração){"entity": "area"}
+    - (Contabilidade){"entity": "area"}
+    - (Projetos){"entity": "area"}
+    - (Engenharia){"entity": "area"}
+    - (Outros){"entity": "area"}
+    - (Estagiário){"entity": "area_nivel"}
+    - (Jovem aprendiz){"entity": "area_nivel"}
+    - (Júnior){"entity": "area_nivel"}
+    - (Sênior){"entity": "area_nivel"}
+    - (Pleno){"entity": "area_nivel"}
+- intent: escolaridade
+  examples: |
+    - (Ensino fundamental){"entity": "escolaridade"}
+    - (Ensino médio){"entity": "escolaridade"}
+    - (Ensino superior){"entity": "escolaridade"}
+    - (Técnico){"entity": "escolaridade"}
+    - (Técnologo){"entity": "escolaridade"}
+    - (Pós Graduação){"entity": "escolaridade"}
+    - (Mestrado){"entity": "escolaridade"}
+    - (Doutorado){"entity": "escolaridade"}
+    - (Outros){"entity": "outros"}
