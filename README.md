@@ -34,10 +34,20 @@ It supports the following user goals:
 #### Build the Docker app and run the services:
 - > docker-compose up --build
 
+- Build again in case some file has been changed:
+- > docker-compose up --build -d
+
 - Check whether the services are up and running using below command:
 - > docker ps -a
 
 - When you see all services up and running, open ip address of the machine in your browser and test your assistant :D
+
+#### Start and stop services:
+- Start:
+- > docker-compose up -d
+
+- Stop:
+- > docker-compose down
 
 
 ## 👩‍💻 Overview of the files
