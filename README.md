@@ -50,6 +50,22 @@ It supports the following user goals:
 - > docker-compose down
 
 
+#### In case you want to install Rasa X on Google Cloud with Docker Compose:
+- > curl -sSL -o install.sh https://storage.googleapis.com/rasa-x-releases/0.35.1/install.sh
+- > sudo bash ./install.sh
+
+- > cd /etc/rasa
+- > sudo docker-compose up -d
+
+- > cd /etc/rasa
+- > sudo python3 rasa_x_commands.py create --update admin me <your_password>
+
+- > sudo docker-compose restart
+
+Open your IP address in a tab.
+
+
+
 ## 👩‍💻 Overview of the files
 `data/stories.yml` - contains stories for Rasa Core
 `data/nlu.yml` - contains example NLU training data
